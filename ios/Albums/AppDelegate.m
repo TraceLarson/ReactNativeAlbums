@@ -39,4 +39,14 @@
 #endif
 }
 
+// iOS 9.x or newer
+#import <React/RCTLinkingManager.h>
+
+- (BOOL)application:(UIApplication *)application
+   openURL:(NSURL *)url
+   options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  return [RCTLinkingManager application:application openURL:url options:options];
+}
+
 @end
